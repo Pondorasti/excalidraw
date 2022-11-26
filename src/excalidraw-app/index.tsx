@@ -1,3 +1,4 @@
+import { usePalette } from "./usePalette";
 import polyfill from "../polyfill";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -772,6 +773,8 @@ const ExcalidrawWrapper = () => {
 };
 
 const ExcalidrawApp = () => {
+  usePalette();
+
   return (
     <TopErrorBoundary>
       <Provider unstable_createStore={() => jotaiStore}>

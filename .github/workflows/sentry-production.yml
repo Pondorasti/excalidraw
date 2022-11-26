@@ -20,6 +20,12 @@ jobs:
           yarn build:app
         env:
           CI: true
+      - name: Palette asset upload
+        run: |
+          yarn palette upload build --ver=$GITHUB_SHA
+        env:
+          CI: true
+          PALETTE_ASSET_KEY: ${{ secrets.PALETTE_ASSET_KEY }}
       - name: Install Sentry
         run: |
           curl -sL https://sentry.io/get-cli/ | bash

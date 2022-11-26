@@ -21,3 +21,6 @@ jest.mock("nanoid", () => {
 const element = document.createElement("div");
 element.id = "root";
 document.body.appendChild(element);
+
+window.performance.mark = jest.fn();
+window.performance.measure = jest.fn();
