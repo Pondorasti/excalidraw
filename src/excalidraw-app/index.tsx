@@ -80,6 +80,7 @@ import { jotaiStore, useAtomWithInitialValue } from "../jotai";
 import { reconcileElements } from "./collab/reconciliation";
 import { parseLibraryTokensFromUrl, useHandleLibrary } from "../data/library";
 import EncryptedIcon from "../components/EncryptedIcon";
+import { usePalette } from "./usePalette";
 
 polyfill();
 window.EXCALIDRAW_THROTTLE_RENDER = true;
@@ -693,6 +694,8 @@ const ExcalidrawWrapper = () => {
 };
 
 const ExcalidrawApp = () => {
+  usePalette();
+
   return (
     <TopErrorBoundary>
       <Provider unstable_createStore={() => jotaiStore}>

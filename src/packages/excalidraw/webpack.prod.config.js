@@ -5,6 +5,7 @@ const BundleAnalyzerPlugin =
 const autoprefixer = require("autoprefixer");
 const webpack = require("webpack");
 const { parseEnvVariables } = require("./env");
+const PalettePlugin = require("@palette.dev/webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -100,6 +101,9 @@ module.exports = {
       "process.env": parseEnvVariables(
         path.resolve(__dirname, "../../../.env.production"),
       ),
+    }),
+    new PalettePlugin({
+      key: process.env.PALETTE_ASSET_KEY,
     }),
   ],
   externals: {
