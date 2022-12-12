@@ -87,3 +87,5 @@ export const usePalette = () => {
     };
   }, []);
 };
+
+// bump version
