@@ -2106,12 +2106,13 @@
   "resolved" "https://registry.npmjs.org/@palette.dev/browser/-/browser-1.13.3.tgz"
   "version" "1.13.3"
 
-"@palette.dev/cli@1.7.0":
-  "integrity" "sha512-xXOT1Ce4K/EdU/ugyG5V+GGcOMuPUqciNe5pTAung9gj5U0pLz4U+68H/dj1tXHxRt2vCcpkaeS21SRxpHoBkQ=="
-  "resolved" "https://registry.npmjs.org/@palette.dev/cli/-/cli-1.7.0.tgz"
-  "version" "1.7.0"
+"@palette.dev/cli@1.8.0-feat-cli-parse-env.2":
+  "integrity" "sha512-Dy8RgyyeBA06++ROXST9Q3QTzbWgSlBtHqyUM4ObBPFypoBNiTHx0KISJTAXHiqRQocInaCneKR4xbcImHXqxg=="
+  "resolved" "https://registry.npmjs.org/@palette.dev/cli/-/cli-1.8.0-feat-cli-parse-env.2.tgz"
+  "version" "1.8.0-feat-cli-parse-env.2"
   dependencies:
     "crosspath" "^1.0.0"
+    "dotenv" "^16.0.3"
     "form-data" "^4.0.0"
     "globby" "^11.1.0"
     "lodash" "^4.17.21"
@@ -4795,6 +4796,11 @@
   "integrity" "sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q=="
   "resolved" "https://registry.npmjs.org/dotenv/-/dotenv-10.0.0.tgz"
   "version" "10.0.0"
+
+"dotenv@^16.0.3":
+  "integrity" "sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ=="
+  "resolved" "https://registry.npmjs.org/dotenv/-/dotenv-16.0.3.tgz"
+  "version" "16.0.3"
 
 "dotenv@16.0.1":
   "integrity" "sha512-1K6hR6wtk2FviQ4kEiSjFiH5rpzEVi8WW0x96aztHVMhEspNpc4DVOUTEHtEva5VThQ8IaBX1Pe4gSzpVVUsKQ=="
