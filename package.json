@@ -20,7 +20,6 @@
   },
   "dependencies": {
     "@palette.dev/browser": "1.13.3",
-    "@palette.dev/webpack-plugin": "1.2.2",
     "@sentry/browser": "6.2.5",
     "@sentry/integrations": "6.2.5",
     "@testing-library/jest-dom": "5.16.2",
@@ -61,6 +60,7 @@
   "devDependencies": {
     "@excalidraw/eslint-config": "1.0.0",
     "@excalidraw/prettier-config": "1.0.2",
+    "@palette.dev/cli": "1.7.0",
     "@types/chai": "4.3.0",
     "@types/lodash.throttle": "4.1.7",
     "@types/pako": "1.0.3",
@@ -115,6 +115,7 @@
     "test": "yarn test:app",
     "autorelease": "node scripts/autorelease.js",
     "prerelease": "node scripts/prerelease.js",
-    "release": "node scripts/release.js"
+    "release": "node scripts/release.js",
+    "palette:upload": "palette upload build"
   }
 }

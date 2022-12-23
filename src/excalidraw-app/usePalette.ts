@@ -27,7 +27,9 @@ if (typeof window !== "undefined") {
   addEventListener("load", () => {
     performance.measure("load");
     setTimeout(() => {
-      if (!interactionProfilingStarted) profiler.stop();
+      if (!interactionProfilingStarted) {
+        profiler.stop();
+      }
     }, 1_000);
   });
 }
@@ -87,5 +89,3 @@ export const usePalette = () => {
     };
   }, []);
 };
-
-// bump version
