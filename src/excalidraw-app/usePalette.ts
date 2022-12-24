@@ -9,6 +9,11 @@ import {
 } from "@palette.dev/browser";
 import { useEffect, useRef } from "react";
 
+console.log({
+  excalidrawSha: window.__EXCALIDRAW_SHA__,
+  reactSha: process.env.REACT_APP_GIT_SHA,
+});
+
 init({
   key: "clax5s0e10000l308833y9u4k",
   plugins: [events(), vitals(), network(), profiler(), measure(), frames()],

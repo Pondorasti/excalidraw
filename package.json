@@ -19,7 +19,7 @@
     ]
   },
   "dependencies": {
-    "@palette.dev/browser": "1.13.3",
+    "@palette.dev/browser": "1.13.7",
     "@sentry/browser": "6.2.5",
     "@sentry/integrations": "6.2.5",
     "@testing-library/jest-dom": "5.16.2",

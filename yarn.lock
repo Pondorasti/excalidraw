@@ -2101,10 +2101,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
-"@palette.dev/browser@1.13.3":
-  "integrity" "sha512-Nn6swZ/qWbW+kGsNW4s9Ojj4NpiIZhdthHLX+JcW+2OyJ4ox6OhPhtGmbHJ4YUGxQRYhpPGYvwcEmha9MpzjSQ=="
-  "resolved" "https://registry.npmjs.org/@palette.dev/browser/-/browser-1.13.3.tgz"
-  "version" "1.13.3"
+"@palette.dev/browser@1.13.7":
+  "integrity" "sha512-g8a5vVd1e/m8RFyWDDm8LxEfnfk+KxjL/NzSSHygQ7/B+OCCFG5jOSD7I6UX4K4/0PFdAXvOCUMDJzpvBia/kg=="
+  "resolved" "https://registry.npmjs.org/@palette.dev/browser/-/browser-1.13.7.tgz"
+  "version" "1.13.7"
 
 "@palette.dev/cli@1.8.0-feat-cli-parse-env.2":
   "integrity" "sha512-Dy8RgyyeBA06++ROXST9Q3QTzbWgSlBtHqyUM4ObBPFypoBNiTHx0KISJTAXHiqRQocInaCneKR4xbcImHXqxg=="
