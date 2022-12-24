@@ -9,11 +9,6 @@ import {
 } from "@palette.dev/browser";
 import { useEffect, useRef } from "react";
 
-console.log({
-  excalidrawSha: window.__EXCALIDRAW_SHA__,
-  reactSha: process.env.REACT_APP_GIT_SHA,
-});
-
 init({
   key: "clax5s0e10000l308833y9u4k",
   plugins: [events(), vitals(), network(), profiler(), measure(), frames()],
@@ -75,22 +70,24 @@ export const usePalette = () => {
   );
 
   useEffect(() => {
+    const debounceProfilerRef = debounceProfiler.current;
+
     // -------------------------------------------------------------------
     // Profile page interactions
     //   * Collect samples every 10ms
     //   * Start the profiler on click, keypress, pointermove, and wheel events
     //   * Stop the profiler after 1s of inactivity
     // -------------------------------------------------------------------
-    addEventListener("click", debounceProfiler.current);
-    addEventListener("keypress", debounceProfiler.current);
-    addEventListener("pointermove", debounceProfiler.current);
-    addEventListener("wheel", debounceProfiler.current);
+    addEventListener("click", debounceProfilerRef);
+    addEventListener("keypress", debounceProfilerRef);
+    addEventListener("pointermove", debounceProfilerRef);
+    addEventListener("wheel", debounceProfilerRef);
 
     return () => {
-      removeEventListener("click", debounceProfiler.current);
-      removeEventListener("keypress", debounceProfiler.current);
-      removeEventListener("pointermove", debounceProfiler.current);
-      removeEventListener("wheel", debounceProfiler.current);
+      removeEventListener("click", debounceProfilerRef);
+      removeEventListener("keypress", debounceProfilerRef);
+      removeEventListener("pointermove", debounceProfilerRef);
+      removeEventListener("wheel", debounceProfilerRef);
     };
   }, []);
 };
