@@ -2085,10 +2085,10 @@
   resolved "https://registry.npmjs.org/@palette.dev/browser/-/browser-1.13.7.tgz"
   integrity sha512-g8a5vVd1e/m8RFyWDDm8LxEfnfk+KxjL/NzSSHygQ7/B+OCCFG5jOSD7I6UX4K4/0PFdAXvOCUMDJzpvBia/kg==
 
-"@palette.dev/cli@1.8.2-fix-cli-upload.2":
-  version "1.8.2-fix-cli-upload.2"
-  resolved "https://registry.yarnpkg.com/@palette.dev/cli/-/cli-1.8.2-fix-cli-upload.2.tgz#2cd60bc9f96d2ab6d83bcda9a5672aee69fa47f0"
-  integrity sha512-OldLuFXc3Vidu6qMVkTdfQMFpov4ygeAqrV71Unh9OrWlx9M4FfMfmvnc41UPFCQ8ku8/OmBGPc6row+wgTeSg==
+"@palette.dev/cli@1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@palette.dev/cli/-/cli-1.8.2.tgz#1284ab6e721e7eab44dd3046bcecdb5e0aed97bc"
+  integrity sha512-WN3MXSGt4D32vOL50T5z7aSecXeRMvyJQg8G66GXqLV/9Zn49bL1FmcI/BSex63Rl1T8/EOJcJPBNJ7MJOgkqg==
   dependencies:
     crosspath "^1.0.0"
     dotenv "^16.0.3"
