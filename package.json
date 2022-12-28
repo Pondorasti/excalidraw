@@ -92,7 +92,7 @@
   "scripts": {
     "build-node": "node ./scripts/build-node.js",
     "build:app:docker": "REACT_APP_DISABLE_SENTRY=true react-scripts build",
-    "build:app": "REACT_APP_GIT_SHA=$VERCEL_GIT_COMMIT_SHA react-scripts build && CI=true palette upload . --ver=$VERCEL_GIT_COMMIT_SHA",
+    "build:app": "REACT_APP_GIT_SHA=$VERCEL_GIT_COMMIT_SHA react-scripts build && CI=true palette upload build --ver=$VERCEL_GIT_COMMIT_SHA",
     "build:version": "node ./scripts/build-version.js",
     "build:prebuild": "node ./scripts/prebuild.js",
     "build": "yarn build:prebuild && yarn build:app && yarn build:version",
