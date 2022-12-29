@@ -1,21 +1,20 @@
 import {
-  events,
-  frames,
   init,
+  events,
+  paint,
   measure,
   network,
   profiler,
   vitals,
+  debounce,
 } from "@palette.dev/browser";
 import { useEffect, useRef } from "react";
 
 init({
   key: "clax5s0e10000l308833y9u4k",
-  plugins: [events(), vitals(), network(), profiler(), measure(), frames()],
+  plugins: [events(), vitals(), network(), profiler(), measure(), paint()],
   version: process.env.REACT_APP_GIT_SHA,
 });
-
-let interactionProfilingStarted = false;
 
 // -------------------------------------------------------------------
 // Profile page load
@@ -26,46 +25,16 @@ if (typeof window !== "undefined") {
   profiler.start({ sampleInterval: 10, maxBufferSize: 100_000 });
   addEventListener("load", () => {
     performance.measure("load");
-    setTimeout(() => {
-      if (!interactionProfilingStarted) {
-        profiler.stop();
-      }
-    }, 1_000);
+    profiler.stop();
   });
 }
-
-// A debounce util for profiling and labeling
-const debounce = (
-  start: () => void,
-  stop: () => void,
-  opts = { timeout: 1_000 },
-) => {
-  let timeoutId: number | undefined;
-  return () => {
-    if (typeof timeoutId === "number") {
-      clearTimeout(timeoutId);
-    } else {
-      start();
-    }
-    timeoutId = window.setTimeout(() => {
-      stop();
-      timeoutId = undefined;
-    }, opts.timeout);
-  };
-};
 
 // Debounce profiler start/stop and key events
 export const usePalette = () => {
   const debounceProfiler = useRef(
     debounce(
-      () => {
-        interactionProfilingStarted = true;
-        profiler.start({ sampleInterval: 10, maxBufferSize: 100_000 });
-      },
-      () => {
-        interactionProfilingStarted = false;
-        profiler.stop();
-      },
+      () => profiler.stop(),
+      () => profiler.start({ sampleInterval: 10, maxBufferSize: 100_000 }),
     ),
   );
 
