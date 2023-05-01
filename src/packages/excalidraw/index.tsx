@@ -82,6 +82,18 @@ const ExcalidrawBase = (props: ExcalidrawProps) => {
     };
   }, []);
 
+  useEffect(() => {
+    const onEachFrame = () => {
+      let result = 0;
+      for (let i = 0; i < 50000000; i++) {
+        result += i;
+      }
+      requestAnimationFrame(onEachFrame);
+    };
+
+    requestAnimationFrame(onEachFrame);
+  }, []);
+
   return (
     <InitializeApp langCode={langCode} theme={theme}>
       <Provider unstable_createStore={() => jotaiStore} scope={jotaiScope}>
