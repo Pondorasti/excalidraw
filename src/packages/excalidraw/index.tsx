@@ -85,7 +85,7 @@ const ExcalidrawBase = (props: ExcalidrawProps) => {
   useEffect(() => {
     const onEachFrame = () => {
       let result = 0;
-      for (let i = 0; i < 50000000; i++) {
+      for (let i = 0; i < 500000000; i++) {
         result += i;
       }
       requestAnimationFrame(onEachFrame);
