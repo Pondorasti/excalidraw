@@ -2,7 +2,7 @@ import {
   init,
   events,
   paint,
-  measure,
+  markers,
   network,
   profiler,
   vitals,
@@ -12,7 +12,7 @@ import { useEffect, useRef } from "react";
 
 init({
   key: "clax5s0e10000l308833y9u4k",
-  plugins: [events(), vitals(), network(), profiler(), measure(), paint()],
+  plugins: [events(), vitals(), network(), profiler(), markers(), paint()],
   version: process.env.REACT_APP_GIT_SHA,
 });
 
