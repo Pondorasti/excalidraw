@@ -14,6 +14,7 @@ init({
   key: "clax5s0e10000l308833y9u4k",
   plugins: [events(), vitals(), network(), profiler(), markers(), paint()],
   version: process.env.REACT_APP_GIT_SHA,
+  debug: true,
 });
 
 // -------------------------------------------------------------------
