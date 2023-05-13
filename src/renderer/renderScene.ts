@@ -414,7 +414,7 @@ export const _renderScene = ({
           if (n <= 1) return n;
           return slowFibonacci(n - 1) + slowFibonacci(n - 2);
         };
-        slowFibonacci(20);
+        // slowFibonacci(20);
         renderElement(element, rc, context, renderConfig);
         // Getting the element using LinearElementEditor during collab mismatches version - being one head of visible elements due to
         // ShapeCache returns empty hence making sure that we get the
