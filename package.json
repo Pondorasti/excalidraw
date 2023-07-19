@@ -19,7 +19,7 @@
     ]
   },
   "dependencies": {
-    "@palette.dev/browser": "1.18.3",
+    "@palette.dev/browser": "1.18.12-fix-client-paint-interaction-limit.2",
     "@sentry/browser": "6.2.5",
     "@sentry/integrations": "6.2.5",
     "@testing-library/jest-dom": "5.16.2",
@@ -117,5 +117,6 @@
     "prerelease": "node scripts/prerelease.js",
     "release": "node scripts/release.js",
     "palette:upload": "@palette.dev/cli upload build"
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }
