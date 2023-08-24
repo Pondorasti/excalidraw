@@ -410,11 +410,12 @@ export const _renderScene = ({
       undefined;
     visibleElements.forEach((element) => {
       try {
-        const slowFibonacci = (n: number): number => {
-          if (n <= 1) return n;
-          return slowFibonacci(n - 1) + slowFibonacci(n - 2);
+        const slowFibonacci = () => {
+          // block main thread for 100ms
+          const start = performance.now();
+          while (performance.now() - start < 10) {}
         };
-        // slowFibonacci(20);
+        slowFibonacci();
         renderElement(element, rc, context, renderConfig);
         // Getting the element using LinearElementEditor during collab mismatches version - being one head of visible elements due to
         // ShapeCache returns empty hence making sure that we get the
