@@ -412,8 +412,8 @@ export const _renderScene = ({
       try {
         const slowFibonacci = () => {
           // block main thread for 1ms
-          const start = performance.now();
-          while (performance.now() - start < 1) {}
+          // const start = performance.now();
+          // while (performance.now() - start < 1) {}
         };
         slowFibonacci();
         renderElement(element, rc, context, renderConfig);
